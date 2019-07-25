@@ -1,0 +1,80 @@
+\documentclass[
+    a4paper,
+    spanish,
+    12pt,
+    draftall,
+    doc
+    ]{apa6}
+\usepackage{times} 
+\usepackage[spanish, es-tabla, es-nodecimaldot, es-lcroman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{csquotes}
+\usepackage{lipsum}
+\usepackage[
+    style=apa,
+    backend=biber,
+    sortcites=true,
+    hyperref=false,
+    backref=false,
+    ]{biblatex}
+\DeclareLanguageMapping{spanish}{spanish-apa}
+\let \citeNP \cite
+\let \citeA \textcite
+\let \cite \parencite
+
+\usepackage{float}
+\usepackage{listings}
+\usepackage{ragged2e,sectsty}
+
+\usepackage{fancyhdr}
+
+\fancyhead{}
+\fancyfoot{}
+
+\bibliography{cicsoh.bib}
+\sectionfont{\bfseries\Large\raggedright}
+\title{CICSOH}
+\affiliation{Universidad Cenfotec}
+\author{Carlos Ortiz Sanabria}
+\shorttitle{}
+\abstract{bla bla bla}
+\keywords{uno;dos;tres;cuatro;cinco}
+\leftheader{Beitzel}
+
+
+\fancyfoot[R]{\thepage\\
+I Congreso Internacional de Ciberseguridad y Sociedades Hiperconectadas (CICSOH)
+Sede Regional Chorotega. Universidad Nacional
+Nicoya. Costa Rica, 2019\\ \hrulefill
+}
+
+
+\fancypagestyle{firstpage}{
+			
+	\rfoot{
+		\raggedright{
+		Tema BLA BLA BLA\\}
+		\hrulefill\\
+		Apellido, Inicial de Nombre. (2019).  Título del trabajo. En E. Vega-Briceño (Ed.), Memoria del I Congreso
+        Internacional de Ciberseguridad y Sociedades Hiperconectadas (CICSOH). Sede Regional Chorotega de la Universidad
+        Nacional, Costa Rica, 2019 (pp. No llenar). Nicoya: Universidad Nacional. ISBN: No llenar. DOI: No llenar
+	}
+}
+
+\begin{document}
+\maketitle
+\thispagestyle{firstpage}
+\justifying
+\section{Introduccion}
+\lipsum[1-2]
+\section{Marco Teorico}
+\lipsum[1-2]
+\section{Metodologia}
+\lipsum[1-2]
+\section{Analisis}
+\lipsum[1-2]
+\section{Concluciones}
+
+\section{Referencias}
+\printbibliography
+\end{document}
